@@ -84,30 +84,63 @@ console.log(`Looking for Words in Sticks, Stones, Bones:`, find(`Words`, [`Stick
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if (letter === string.charAt(0)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
-
+console.log(`Checking if first letter of string "kids these days" is k:`, isFirstLetter(`k`, `kids these days`));
+console.log(`Checking if first letter of string "kids these days" is p:`, isFirstLetter(`p`, `kids these days`));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
+  while(array.length > 0) {
+    sum += array.pop();
+  }
   // TODO: return the sum
+  return sum;
 }
+console.log(`sum of this array =`, sumAll([1, 5, 43, 86, 2, 8, 0, -4]));
+
+//used Stack Overflow for the above; https://stackoverflow.com/questions/71005122/sum-for-array-with-while-loop-js
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
-
+function allPositive(inputArray) {
+  let newArray = [];
+  for(let i = 0; i < inputArray.length; i ++){
+    if(inputArray[i] > 0){
+         newArray.push(inputArray[i]);
+    }
+    else{
+         newArray.push();
+    }
+}
+  return newArray;
 }
 
+console.log(`positive for this array: [5, -23, 7, 9, -14, 209]:`, allPositive([5, -23, 7, 9, -14, 209]));
+console.log(`positive for this array: [-5, -23, -7, -9, -14, -209]:`, allPositive([-5, -23, -7, -9, -14, -209]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
 
+//From Edabit: Create a function that returns an array of strings sorted by length in ascending order.
+//https://edabit.com/challenge/aNZzLBxQpidWBF26X
+
+function sortByLength(stringArray) {
+  let stringLength = 
+  stringArray.sort();
+  return stringArray;
+}
+
+console.log(`strings sorted by length:`, sortByLength([`alpha`, `beta`, `epsilon`]));
 
 // DO NOT MODIFY
 // Used for automated testing
