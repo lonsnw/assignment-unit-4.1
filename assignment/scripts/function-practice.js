@@ -135,12 +135,15 @@ console.log(`positive for this array: [-5, -23, -7, -9, -14, -209]:`, allPositiv
 //https://edabit.com/challenge/aNZzLBxQpidWBF26X
 
 function sortByLength(stringArray) {
-  let stringLength = 
-  stringArray.sort();
+  stringArray.sort((a, b) => a.length - b.length);
   return stringArray;
 }
 
 console.log(`strings sorted by length:`, sortByLength([`alpha`, `beta`, `epsilon`]));
+console.log(`strings sorted by length:`, sortByLength([`maybe`, `perhaps`, `mayhap`]));
+
+//used this to solve: https://stackoverflow.com/questions/10630766/how-to-sort-an-array-based-on-the-length-of-each-element
+
 
 // DO NOT MODIFY
 // Used for automated testing
