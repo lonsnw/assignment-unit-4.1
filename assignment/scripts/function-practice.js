@@ -11,44 +11,53 @@ function hello() {
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
 
-
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  return `${'Hello,'} ${name}!`;
 }
 // Remember to call the function to test
-
+console.log(`Test - should say, "Hello, Your Name!" for the sake of the autotest.`, helloName(`Your Name`));
+console.log(`Test - Now with my name`, helloName(`Lons`));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
   // return firstNumber + secondNumber;
 }
+console.log(`Test - doing some addition: 4 + 298 =`, addNumbers(4, 298))
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(firstNumber, secondNumber, thirdNumber) {
+  return firstNumber * secondNumber * thirdNumber;
 }
+console.log(`Test - doing some multiplication: 4 * 7 * 0 =`, multiplyThree(4, 7, 0))
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    return true;
   }
-  return;
+  if (number < 0) {
+    return false;
+}
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-
+console.log(`Test with a positive number (4):`, isPositive(4));
+console.log(`Test with a negative number (-4):`, isPositive(-4));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-
+  return array[array.length-1];
 }
+console.log(`Returning the last item in this array: Sticks, Stones, Bones:`, getLast([`Sticks`, `Stones`, `Bones`]));
+console.log(`Returning undefined because an array is empty:`, getLast([]));
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
