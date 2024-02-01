@@ -41,13 +41,17 @@ function isPositive(number) {
   if (number > 0) {
     return true;
   }
-  if (number < 0) {
+  if (number === 0){
+    return false;
+  }
+  else {
     return false;
 }
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log(`Test with a positive number (4):`, isPositive(4));
+console.log(`Test with zero:`, isPositive(0));
 console.log(`Test with a negative number (-4):`, isPositive(-4));
 
 // 6. Function to return the _last_ item in an array. If the 
@@ -63,8 +67,16 @@ console.log(`Returning undefined because an array is empty:`, getLast([]));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+  if (array.indexOf(value) >= 0) {
+    return true;
+  }
+  if (array.indexOf(value) === -1) {
+    return false;
+  }
 }
+console.log(`Looking for Stones in Sticks, Stones, Bones:`, find(`Stones`, [`Sticks`, `Stones`, `Bones`]));
+console.log(`Looking for Words in Sticks, Stones, Bones:`, find(`Words`, [`Sticks`, `Stones`, `Bones`]));
+
 
 // ----------------------
 // Stretch Goals
