@@ -18,7 +18,7 @@ function helloName(name) {
 }
 // Remember to call the function to test
 console.log(`Test - should say, "Hello, Your Name!" for the sake of the autotest.`, helloName(`Your Name`));
-console.log(`Test - Now with my name`, helloName(`Lons`));
+console.log(`Test - Now with my name:`, helloName(`Lons`));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
