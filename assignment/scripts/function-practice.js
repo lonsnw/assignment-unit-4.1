@@ -77,6 +77,36 @@ function find(value, array) {
 console.log(`Looking for Stones in Sticks, Stones, Bones:`, find(`Stones`, [`Sticks`, `Stones`, `Bones`]));
 console.log(`Looking for Words in Sticks, Stones, Bones:`, find(`Words`, [`Sticks`, `Stones`, `Bones`]));
 
+//MISSED THE DIRECTIONS, this is the correct answer from class on 2/7: 
+function find(value, array) {
+  //when you're writing code, the parameters/elements 
+  //will be greyed out in vs code until you use them
+  //loop to search through the array
+  for (let item of array) {
+      console.log(item);
+      if(item === value) {
+          return true;
+      }
+      // else {
+      //     //we don't want to return false here because a return breaks the loop
+      //     return false;
+      // }
+  }
+  //we return after the loop so that the return doesn't stop the loop
+  return false;
+}
+
+let arrayOfItems = [`hat`, `sweater`, `shoes`, `pants`]
+
+//this is the test case now, where we're testing our code
+//you want here to think of all of the possible things that will happen
+//and don't only test the first thing in the array 
+//because then you're less likely to catch bugs
+console.log(`should return true,`, find('shoes', arrayOfItems));
+console.log(`should return false,`, find('shirt', arrayOfItems));
+console.log(`should return true,`, find('hat', arrayOfItems));
+
+
 
 // ----------------------
 // Stretch Goals
